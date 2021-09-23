@@ -7,7 +7,9 @@ const Shop = () => {
     const [cart, setCart] = useState([])
 
     useEffect(() => {
-        fetch(`https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON`)
+        // fetch(`https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON`)
+        fetch('./products.JSON')
+
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
